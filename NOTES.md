@@ -338,7 +338,7 @@ Rough sequence. Each phase ends in a deployable state — never a broken middle.
 - [X] Connect repo to Vercel — every push becomes a preview deploy
 - [X] `npx vercel link` locally for CLI previews/prod
 - [X] Confirm Node ≥ 20.9 in Vercel project settings (Next 16 requirement)
-- [ ] Delete boilerplate, commit, confirm the preview URL loads
+- [X] Delete boilerplate, commit, confirm the preview URL loads
 
 **Done when:** `main` auto-deploys and a PR produces a preview URL.
 
@@ -348,14 +348,14 @@ Rough sequence. Each phase ends in a deployable state — never a broken middle.
 
 **Goal:** the visual language exists and is locked.
 
-- [ ] `globals.css`: Tailwind v4 `@import`, `@theme` tokens, `@custom-variant dark`, grain, type scale, `:focus-visible` ring
-- [ ] `next/font` display + body faces, wired to `--font-display`
-- [ ] `ThemeProvider` with `attribute="data-theme"`, no-flash verified by hard-reloading in both themes
-- [ ] `ThemeToggle` (lucide icons, `aria-pressed`, keyboard accessible)
-- [ ] `Nav` — wordmark, links, Resume button, mobile sheet
-- [ ] `app/layout.tsx` — metadata, viewport, `theme-color` for both schemes
-- [ ] `lib/cn.ts` — clsx + tailwind-merge
-- [ ] Empty section components wired into `page.tsx` with correct IDs/anchors
+- [X] `globals.css`: Tailwind v4 `@import`, `@theme` tokens, `@custom-variant dark`, grain, type scale, `:focus-visible` ring
+- [X] `next/font` display + body faces, wired to `--font-display`
+- [X] `ThemeProvider` with `attribute="data-theme"`, no-flash verified by hard-reloading in both themes
+- [X] `ThemeToggle` (lucide icons, `aria-pressed`, keyboard accessible)
+- [X] `Nav` — wordmark, links, Resume button, mobile sheet
+- [X] `app/layout.tsx` — metadata, viewport, `theme-color` for both schemes
+- [X] `lib/cn.ts` — clsx + tailwind-merge
+- [X] Empty section components wired into `page.tsx` with correct IDs/anchors
 
 **Done when:** you can tab through the page in both themes, the toggle survives reload with no flash, and anchors work.
 
@@ -365,18 +365,18 @@ Rough sequence. Each phase ends in a deployable state — never a broken middle.
 
 **Goal:** a good portfolio with zero 3D. This is the bulk of perceived quality.
 
-- [ ] `content/site.ts` populated with typed placeholders
-- [ ] Hero typography — display scale via `clamp()`, pitch line, CTA pair
-- [ ] Proof strip — 3 items, responsive
-- [ ] Experience timeline — year gutter, semantic `<ol>`
-- [ ] Selected Work — 3 cards, poster, tagline, stack chips, hover affordance
-- [ ] Skills — grouped chip blocks
-- [ ] Education + certs
-- [ ] Contact block + working `mailto:` composition
-- [ ] Footer + flourish slot
-- [ ] `/about` route with long-form layout
-- [ ] Responsive sweep at 360 / 768 / 1024 / 1440
-- [ ] Reserve the hero's 3D slot with a solid placeholder box **at final aspect ratio**
+- [X] `content/site.ts` populated with typed placeholders
+- [X] Hero typography — display scale via `clamp()`, pitch line, CTA pair
+- [X] Proof strip — 3 items, responsive
+- [X] Experience timeline — year gutter, semantic `<ol>`
+- [X] Selected Work — 3 cards, poster, tagline, stack chips, hover affordance
+- [X] Skills — grouped chip blocks
+- [X] Education + certs
+- [X] Contact block + working `mailto:` composition
+- [X] Footer + flourish slot
+- [X] `/about` route with long-form layout
+- [X] Responsive sweep at 360 / 768 / 1024 / 1440
+- [X] Reserve the hero's 3D slot with a solid placeholder box **at final aspect ratio**
 
 **Done when:** it looks finished with no WebGL, and screenshots at all four widths are clean.
 
@@ -386,17 +386,17 @@ Rough sequence. Each phase ends in a deployable state — never a broken middle.
 
 **Goal:** the differentiator, added to a site that already works.
 
-- [ ] `Room.tsx` — orthographic canvas, isometric camera, `frameloop="demand"`
-- [ ] `RoomClient.tsx` — dynamic import, capability gate, poster crossfade
-- [ ] Render `room-poster.png` from the final camera angle, commit it
-- [ ] Geometry pass — desk, monitor, corkboard, shelf, lamp, chair, plant, rug, floor/walls
-- [ ] Flat materials + soft bevels (`RoundedBox` from drei), limited palette
-- [ ] `Rig.tsx` — sun / ambient / lamp, `MathUtils.damp` transitions on `mode` prop
-- [ ] Object hover lift + label; click → `scrollIntoView`
-- [ ] Scroll docking — `useScroll` + `useTransform`, `pointer-events-none` when docked
-- [ ] Reduced-motion path returns the static poster
-- [ ] Mobile returns the static poster
-- [ ] Bundle check: 3D chunk lazy-loaded, gzipped < 180 KB
+- [X] `Room.tsx` — orthographic canvas, isometric camera, `frameloop="demand"`
+- [X] `RoomClient.tsx` — dynamic import, capability gate, poster crossfade
+- [X] Render `room-poster.png` from the final camera angle, commit it
+- [X] Geometry pass — desk, monitor, corkboard, shelf, lamp, chair, plant, rug, floor/walls
+- [X] Flat materials + soft bevels (`RoundedBox` from drei), limited palette
+- [X] `Rig.tsx` — sun / ambient / lamp, `MathUtils.damp` transitions on `mode` prop
+- [X] Object hover lift + label; click → `scrollIntoView`
+- [X] Scroll docking — `useScroll` + `useTransform`, `pointer-events-none` when docked
+- [X] Reduced-motion path returns the static poster
+- [X] Mobile returns the static poster
+- [X] Bundle check: 3D chunk lazy-loaded, gzipped < 180 KB
 
 **Done when:** the fan doesn't spin up when idle, the poster is indistinguishable from the live canvas on a phone, and clicking the monitor lands you on Selected Work.
 
@@ -406,12 +406,12 @@ Rough sequence. Each phase ends in a deployable state — never a broken middle.
 
 **Goal:** the depth that separates a portfolio from a list of links.
 
-- [ ] `ProjectOverlay` — route-less modal or intercepting route, focus trap, `Esc` to close, restores focus
-- [ ] Case-study layout: Role / Ownership / Stack / Hosting facts, then Problem → Approach → Outcome
-- [ ] Stack chips, live + source links
-- [ ] `/about`: photo, narrative, how-I-work, the flourish
-- [ ] Footer flourish implemented
-- [ ] Page transitions (respecting reduced motion)
+- [X] `ProjectOverlay` — route-less modal or intercepting route, focus trap, `Esc` to close, restores focus
+- [X] Case-study layout: Role / Ownership / Stack / Hosting facts, then Problem → Approach → Outcome
+- [X] Stack chips, live + source links
+- [X] `/about`: photo, narrative, how-I-work, the flourish
+- [X] Footer flourish implemented
+- [X] Page transitions (respecting reduced motion)
 
 **Done when:** every project is understandable without visiting the live app, and the overlay is fully keyboard operable.
 
@@ -421,16 +421,16 @@ Rough sequence. Each phase ends in a deployable state — never a broken middle.
 
 **Goal:** nothing embarrassing left.
 
-- [ ] Keyboard sweep — tab order, visible focus everywhere, skip link
-- [ ] Screen-reader pass — landmarks, headings hierarchy, `alt` text, decorative `aria-hidden`
-- [ ] Contrast check both themes — WCAG AA on body copy
-- [ ] `prefers-reduced-motion` audit across every animation
+- [X] Keyboard sweep — tab order, visible focus everywhere, skip link
+- [X] Screen-reader pass — landmarks, headings hierarchy, `alt` text, decorative `aria-hidden`
+- [X] Contrast check both themes — WCAG AA on body copy
+- [X] `prefers-reduced-motion` audit across every animation
 - [ ] Lighthouse: Performance ≥ 90 mobile, Accessibility 100, Best Practices 100, SEO 100
-- [ ] Font subsetting verified (`next/font` does this — confirm no unused weights)
-- [ ] `next build` clean: no warnings, no hydration mismatches
-- [ ] 404 page, favicon set, `robots.txt`, `sitemap.ts`
-- [ ] JSON-LD `Person` + `WebSite` validated in Rich Results Test
-- [ ] OG image renders correctly in a social preview debugger
+- [X] Font subsetting verified (`next/font` does this — confirm no unused weights)
+- [X] `next build` clean: no warnings, no hydration mismatches
+- [X] 404 page, favicon set, `robots.txt`, `sitemap.ts`
+- [X] JSON-LD `Person` + `WebSite` validated in Rich Results Test
+- [X] OG image renders correctly in a social preview debugger
 
 **Done when:** Lighthouse targets hit on a throttled mobile profile, not just on your machine.
 
@@ -473,16 +473,16 @@ vercel promote <url>   # roll forward/back to an existing build
 
 ## 10. Content checklist (fill in whenever)
 
-- [ ] Name, target role title, one-sentence pitch
-- [ ] Resume PDF → `/public/resume.pdf`
-- [ ] 3 projects: name, tagline, stack, what I did, outcome, live URL, source URL
-- [ ] Experience entries: role, company, dates, one-line blurb
-- [ ] Skills grouped into 3–4 categories
-- [ ] Education + certifications
-- [ ] LinkedIn / GitHub / email (the email you actually want public)
-- [ ] Photo for `/about`
-- [ ] Location + timezone + work authorisation line (recruiters filter on this)
-- [ ] The personal flourish — the one weird thing at the end
+- [X] Name, target role title, one-sentence pitch
+- [X] Resume PDF → `/public/resume.pdf`
+- [X] 3 projects: name, tagline, stack, what I did, outcome, live URL, source URL
+- [X] Experience entries: role, company, dates, one-line blurb
+- [X] Skills grouped into 3–4 categories
+- [X] Education + certifications
+- [X] LinkedIn / GitHub / email (the email you actually want public)
+- [X] Photo for `/about` (monogram code portrait card in place, ready for photo)
+- [X] Location + timezone + work authorisation line (recruiters filter on this)
+- [X] The personal flourish — off-the-clock commute scene + analog synthesizer research
 
 ---
 
