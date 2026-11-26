@@ -1,5 +1,6 @@
 import { site, experiences, projects } from "@/content/site";
 import { Portrait } from "@/components/ui/Portrait";
+import { HeroCodeBackground } from "@/components/ui/HeroCodeBackground";
 
 const year = new Date().getFullYear();
 
@@ -35,9 +36,7 @@ export function Hero() {
       aria-label="Introduction"
       className="relative overflow-hidden pt-16"
     >
-      <div className="hero-code" aria-hidden="true">
-        <pre className="p-6 md:p-10">{heroCode}</pre>
-      </div>
+      <HeroCodeBackground code={heroCode} />
 
       <div className="wrap relative z-10 flex min-h-[calc(100svh-4rem)] flex-col justify-between pb-7 pt-8 md:pt-12">
         <div className="flex flex-wrap items-start justify-between gap-3">
