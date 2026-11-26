@@ -13,7 +13,6 @@ const FOOTER_LINKS = [
 ];
 
 const EMAIL = site.links.email.replace("mailto:", "");
-const [roleA, roleB] = site.role.split(" & ");
 const year = new Date().getFullYear();
 
 export function Footer() {
@@ -25,11 +24,7 @@ export function Footer() {
             {site.name.split(" ")[0]}
             <span className="footer-dot">.</span>
           </h2>
-          <p>
-            {roleA} &amp;
-            <br />
-            {roleB}.
-          </p>
+          <p>{site.role}.</p>
         </div>
 
         <nav aria-label="Footer navigation">

@@ -7,7 +7,7 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 export const metadata: Metadata = {
   title: `About · ${site.name}`,
   description:
-    "Engineering philosophy, system design approach, background, and personal interests.",
+    "Background, projects, and approach to full-stack engineering and applied machine learning.",
 };
 
 export default function AboutPage() {
@@ -33,9 +33,10 @@ export default function AboutPage() {
               for craft.
             </h1>
             <p className="measure mt-7 text-lead leading-snug text-ink-soft">
-              I&apos;m a full-stack software engineer who cares about how systems
-              behave when the network fails, when data spikes by 10x, and when
-              someone opens the page on a three-year-old phone.
+              I&apos;m a computer science student and full-stack engineer who
+              likes understanding how things work below the framework — from
+              HTTP framing and database schemas to the models behind a
+              prediction.
             </p>
           </div>
 
@@ -53,16 +54,17 @@ export default function AboutPage() {
           </div>
           <div className="space-y-4 text-base leading-relaxed text-ink-soft lg:col-span-7 lg:col-start-6">
             <p>
-              Software quality is revealed at the edges: how a system behaves
-              when the network fails, when data spikes by 10x, or when users
-              interact on battery-constrained mobile hardware.
+              Software quality is revealed at the edges: how a server handles a
+              malformed request, what happens when a relationship in the schema
+              does not match the domain, or how a model behaves on the class it
+              saw least often.
             </p>
             <p>
-              My default approach prioritises deterministic data models,
-              zero-layout-shift rendering, and ruthless performance budgeting.
-              Whether building microservices in Go or motion-driven interfaces
-              in React, I aim for solutions that are maintainable, accessible,
-              and fast.
+              My default approach is to keep data models explicit, write code I
+              can reason about, and learn the protocol before reaching for the
+              library. Whether that&apos;s a Go server, a PostgreSQL schema, or a
+              PyTorch experiment, I aim for solutions that are understandable
+              and easy to maintain.
             </p>
           </div>
         </div>
@@ -72,27 +74,26 @@ export default function AboutPage() {
             <p className="eyebrow">02 / What I value</p>
             <ul className="mt-5 space-y-3 text-sm leading-relaxed text-ink-soft">
               <li className="border-b border-line pb-3">
-                Production reliability over resume-driven hype
+                Understanding the fundamentals before the framework
               </li>
               <li className="border-b border-line pb-3">
                 Clear documentation and reproducible build steps
               </li>
               <li className="border-b border-line pb-3">
-                Inclusive design and WCAG accessibility compliance
+                Data models that match the domain
               </li>
-              <li>Sub-100ms feedback loops</li>
+              <li>Interfaces that stay responsive and accessible</li>
             </ul>
           </div>
 
           <div className="bg-canvas p-6 sm:p-8">
             <p className="eyebrow">03 / Continuous research</p>
             <p className="mt-5 text-sm leading-relaxed text-ink-soft">
-              Currently exploring WebGPU shaders, distributed consensus
-              algorithms, and multi-agent AI orchestration patterns with
-              deterministic graph representations.
+              Currently going deeper into reinforcement learning, deep learning
+              in Python, and protocol-level systems work in Go.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-              I keep a running list of small experiments. Some become products;
+              I keep a running list of small experiments. Some become projects;
               most become better instincts.
             </p>
           </div>
@@ -102,15 +103,15 @@ export default function AboutPage() {
           <div className="lg:col-span-4">
             <p className="eyebrow">04 / The flourish</p>
             <h2 className="mt-3 font-display text-title font-semibold leading-[0.95] tracking-[-0.04em] text-ink">
-              Analog &amp; digital.
+              Curiosity, applied.
             </h2>
           </div>
           <div className="lg:col-span-7 lg:col-start-6">
             <p className="text-base leading-relaxed text-ink-soft">
-              When not writing code or tuning shaders, I experiment with analog
-              synthesizers, mechanical keyboards, and architectural photography.
-              The same principles of rhythm, physical acoustics, and modular
-              structure influence how I craft software.
+              I learn best by rebuilding things from scratch: an HTTP server
+              without net/http, a genre classifier from raw audio, a typing tool
+              built around real code. Most of these start as a question and end
+              as a project.
             </p>
           </div>
         </div>
@@ -124,7 +125,8 @@ export default function AboutPage() {
                 How I got here.
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-                Key milestones from early compiler &amp; OpenGL demos to distributed edge architectures.
+                Key milestones from computer science foundations to full-stack
+                products and applied ML.
               </p>
             </div>
 

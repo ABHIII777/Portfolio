@@ -34,7 +34,7 @@ export function Portrait({ className = "", rotate = "" }: PortraitProps) {
               <p className="mt-0.5 text-xs text-ink-soft">{site.role}</p>
             </div>
             <span className="portrait-meta text-right">
-              {site.location}
+              {site.location.split(",")[0]}
               <br />
               {site.timezone.split(" ")[0]}
             </span>
@@ -49,7 +49,7 @@ export function Portrait({ className = "", rotate = "" }: PortraitProps) {
 
           <div className="flex flex-1 flex-col justify-center gap-4">
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.18em] opacity-60">
-              Currently
+              Most recently
             </p>
             <p className="font-display text-2xl font-semibold leading-[1.05] tracking-tight">
               {site.current.role}

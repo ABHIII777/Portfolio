@@ -16,11 +16,11 @@ export function Bio() {
 
             <p className="mt-6 text-lead leading-tight text-ink">
               Full Stack Engineer
-              <span className="text-ink-soft"> &amp; Creative Developer.</span>
+              <span className="text-ink-soft"> across web, systems &amp; ML.</span>
             </p>
 
             <div className="mt-9 border-t border-line pt-4">
-              <p className="eyebrow">Currently at</p>
+              <p className="eyebrow">Most recently at</p>
               <p className="mt-2 text-base font-semibold text-ink">
                 {site.current.company}
               </p>
@@ -43,19 +43,21 @@ export function Bio() {
               <p className="text-lead leading-snug text-ink-soft">
                 I build{" "}
                 <strong className="font-semibold text-ink">
-                  robust production systems
+                  full-stack web apps
                 </strong>{" "}
                 and{" "}
                 <strong className="font-semibold text-ink">
-                  precision-crafted interfaces
+                  small, understandable systems
                 </strong>
-                , from distributed backends to spatial user experiences.
+                , from Go servers and relational schemas to React interfaces and
+                applied machine learning.
               </p>
 
               <p className="mt-5 text-sm leading-relaxed text-ink-soft">
-                Most of my work lives at the seam between reliability and
-                craft: deterministic data models, zero-layout-shift rendering,
-                and interfaces that stay fast when everything else gets busy.
+                I&apos;m finishing a B.S. in Computer Science at Adani
+                University. I care about the layer below the framework: how
+                requests are framed, how data is modelled, and why a model gets
+                it wrong.
               </p>
             </div>
 

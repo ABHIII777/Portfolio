@@ -16,8 +16,8 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Edit content
 
 All copy, links, experience, projects, skills, and education live in
-[`content/site.ts`](./content/site.ts). Swap the placeholder email, GitHub,
-LinkedIn, and `public/resume.pdf` before shipping.
+[`content/site.ts`](./content/site.ts). The downloadable resume is
+[`public/resume.pdf`](./public/resume.pdf).
 
 The portrait is a code-built monogram card in
 [`components/ui/Portrait.tsx`](./components/ui/Portrait.tsx). Replace the

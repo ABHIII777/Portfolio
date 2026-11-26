@@ -11,7 +11,7 @@ export function Experience() {
               Experience.
             </h2>
             <p className="mt-4 max-w-xs text-base leading-relaxed text-ink-soft">
-              Current work. Back to the foundations.
+              Recent work. Back to the foundations.
             </p>
           </header>
 

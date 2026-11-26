@@ -44,7 +44,7 @@ export function Hero() {
             </p>
           </div>
 
-          <div className="relative mx-auto w-[clamp(8.5rem,23vw,15rem)] shrink-0 rise [animation-delay:260ms] lg:mx-0 lg:mb-1">
+          <div className="relative mx-auto w-[clamp(12rem,23vw,15rem)] shrink-0 rise [animation-delay:260ms] lg:mx-0 lg:mb-1">
             <Portrait rotate="rotate-[2deg]" />
           </div>
         </div>

@@ -1,26 +1,26 @@
 export const site = {
   name: "Abhi Patel",
-  role: "Full Stack Engineer & Creative Developer",
+  role: "Full Stack Engineer",
   pitch:
-    "Building robust production distributed systems and precision-crafted spatial user interfaces.",
-  location: "India",
+    "Full-stack developer working across Go, TypeScript, and Python — from protocol-level servers and relational data models to applied machine learning.",
+  location: "Ahmedabad, Gujarat",
   timezone: "IST (UTC+5:30)",
-  availability: "Open to full-time engineering roles & select contracts",
+  availability: "Open to internships & early-career engineering roles",
   current: {
-    role: "Senior Full Stack Engineer",
-    company: "Tech Systems",
-    location: "Remote / India",
+    role: "Software Engineer",
+    company: "VLED Lab, IIT Ropar",
+    location: "Ahmedabad, Gujarat",
   },
   links: {
-    email: "mailto:abhi@example.com",
-    linkedin: "https://linkedin.com/in/",
-    github: "https://github.com/",
+    email: "mailto:abhi.patel2k5@gmail.com",
+    linkedin: "https://www.linkedin.com/in/abhi-patel-a5659a345",
+    github: "https://github.com/ABHIII777",
     resume: "/resume.pdf",
   },
   proof: [
-    { value: "4+ yrs", label: "Production Engineering" },
-    { value: "100K+", label: "Monthly Active Users" },
-    { value: "<80ms", label: "P95 Edge API Latency" },
+    { value: "4", label: "Full-stack & systems projects" },
+    { value: "82%", label: "CNN validation accuracy" },
+    { value: "2027", label: "B.S. Computer Science, expected" },
   ],
 } as const;
 
@@ -39,50 +39,19 @@ export type Job = {
 export const experiences: Job[] = [
   {
     id: "exp-1",
-    role: "Senior Full Stack Engineer",
-    company: "Tech Systems",
-    location: "Remote",
-    start: "2023",
-    end: "Present",
-    blurb:
-      "Architecting distributed microservices, edge routing layers, and responsive web applications for enterprise clients.",
-    highlights: [
-      "Engineered real-time collaboration pipeline reducing sync latency by 45%",
-      "Scaled cloud architecture supporting 100K+ concurrent monthly active users",
-      "Mentored junior engineers and led front-end performance initiative",
-    ],
-    stack: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Redis", "Docker"],
-  },
-  {
-    id: "exp-2",
     role: "Software Engineer",
-    company: "Digital Studio",
-    location: "Remote",
-    start: "2021",
-    end: "2023",
+    company: "VLED Lab, IIT Ropar",
+    location: "Ahmedabad, Gujarat",
+    start: "May 2026",
+    end: "Jul 2026",
     blurb:
-      "Built client-facing web platforms, design systems, and data-dense dashboards with high frame-rate interactive graphics.",
+      "Built offline, rule-based learning tools for an education-design lab — no external AI APIs required.",
     highlights: [
-      "Authored unified component library used across 12 distinct product portals",
-      "Implemented WebGL and canvas-based spatial visualisations",
-      "Decreased bundle sizes by 38% via targeted code-splitting and asset optimization",
+      "Designed an offline rule-based mentor engine covering abstraction mapping, Python code generation, prompt scoring, and misconception detection.",
+      "Removed the dependency on external AI keys by keeping the entire pipeline local and deterministic.",
+      "Built a story-driven 12-step lesson engine that teaches exception handling through a Panchatantra fable, ending in a drag-and-drop coding step with simulated terminal execution.",
     ],
-    stack: ["React", "TypeScript", "Tailwind CSS", "Three.js", "GraphQL"],
-  },
-  {
-    id: "exp-3",
-    role: "Frontend Engineer",
-    company: "Labs Inc.",
-    location: "India",
-    start: "2020",
-    end: "2021",
-    blurb:
-      "Developed high-traffic marketing sites, interactive prototypes, and internal tooling with accessible design standards.",
-    highlights: [
-      "Delivered WCAG 2.1 AA compliant design system overhaul",
-      "Achieved 98+ Lighthouse scores across all key conversion flows",
-    ],
-    stack: ["React", "JavaScript", "CSS/SCSS", "REST APIs"],
+    stack: ["Python", "Rule-Based Systems", "Code Generation", "Interactive Learning"],
   },
 ];
 
@@ -91,7 +60,6 @@ export type Project = {
   name: string;
   tagline: string;
   stack: string[];
-  poster: string;
   live?: string;
   source?: string;
   role: string;
@@ -103,64 +71,84 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "spatial-studio",
-    name: "The Room",
-    tagline: "Low-poly isometric 3D workspace with time-of-day dynamic lighting & scroll docking.",
-    stack: ["Three.js", "React Three Fiber", "Next.js", "Tailwind CSS"],
-    poster: "/room-poster.png",
-    live: "/studio",
-    source: "https://github.com/",
-    role: "Lead Creative Developer & Architect",
-    period: "2024",
+    slug: "http-server-go",
+    name: "HTTP/1.1 Server",
+    tagline:
+      "HTTP/1.1 server and interactive CLI client built from scratch in Go, without net/http.",
+    stack: ["Go", "TCP", "bufio", "CLI"],
+    role: "Solo developer",
+    period: "Self-directed",
     problem:
-      "Traditional developer portfolios either rely on generic templates or heavy, unoptimized 3D scenes that lag on mobile devices and drain laptop batteries.",
+      "Using net/http hides the parts of HTTP that matter most: how requests are framed, when connections close, and where a header can be injected.",
     approach: [
-      "Engineered an orthographic low-poly scene using pure code primitives and zero heavy GLTF assets.",
-      "Implemented demand-driven rendering (`frameloop='demand'`) so the GPU stays dormant when idle.",
-      "Built dual daylight/night lighting rigs smoothly interpolated via `THREE.MathUtils.damp`.",
+      "Implemented a goroutine-per-connection server with bufio-based request parsing and no net/http dependency.",
+      "Added Content-Length framing with a 1 MiB cap, plus 30s read and 5s write deadlines.",
+      "Built a CLI client that constructs raw requests, guards against header injection, and enforces connection timeouts.",
     ],
     outcome:
-      "A 60 FPS interactive hero experience with zero idle battery impact and instant fallback to a lightweight static poster.",
+      "A working request/response path that demonstrates framing, connection lifecycle, and protocol semantics end to end.",
   },
   {
-    slug: "edge-pulse",
-    name: "EdgePulse",
-    tagline: "Distributed telemetry and observability pipeline for edge serverless functions.",
-    stack: ["TypeScript", "Go", "ClickHouse", "Next.js", "Apache Kafka"],
-    poster: "/posters/edgepulse.png",
-    live: "https://example.com",
-    source: "https://github.com/",
-    role: "Backend & Systems Engineer",
-    period: "2023 - 2024",
+    slug: "synapse",
+    name: "Synapse",
+    tagline:
+      "Full-stack social platform with authentication, media uploads, and interactive feeds.",
+    stack: [
+      "Next.js",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "Tailwind CSS",
+      "JWT",
+      "Zod",
+      "Supabase Storage",
+    ],
+    role: "Full-stack developer",
+    period: "Self-directed",
     problem:
-      "Serverless edge functions generate vast telemetry streams that overwhelm central databases, leading to delayed incident response.",
+      "Social products look simple until auth, media, relationships, and feed state all have to agree with each other.",
     approach: [
-      "Streamed high-volume metrics into a vectorized ClickHouse cluster through partitioned Kafka queues.",
-      "Constructed sub-second aggregate visualization dashboards in Next.js with optimistic streaming updates.",
-      "Designed automatic alert policies with anomaly detection heuristics.",
+      "Built authentication and protected API routes with JWT, bcrypt, and Zod validation.",
+      "Modelled users, posts, likes, comments, reposts, bookmarks, and follow relationships in PostgreSQL with Drizzle ORM.",
+      "Added image uploads through Supabase Storage and wired the social feed UI in Next.js and Tailwind CSS.",
     ],
     outcome:
-      "Reduced p95 query latency from 3.2s to 120ms while cutting cloud telemetry ingest spend by 52%.",
+      "A complete platform covering sign-up, posting, media, and the social interactions expected from a modern feed.",
   },
   {
-    slug: "synapse-flow",
-    name: "Synapse Flow",
-    tagline: "Node-based canvas interface for visualising and orchestrating LLM execution graphs.",
-    stack: ["React", "TypeScript", "WebSockets", "Python", "FastAPI"],
-    poster: "/posters/synapse.png",
-    live: "https://example.com",
-    source: "https://github.com/",
-    role: "Full Stack Engineer",
-    period: "2023",
+    slug: "typewithme",
+    name: "TypeWithMe",
+    tagline:
+      "Typing practice built around real code snippets instead of generic text.",
+    stack: ["Next.js", "PostgreSQL", "TypeScript"],
+    role: "Solo developer",
+    period: "Self-directed",
     problem:
-      "Debugging multi-agent LLM reasoning chains is opaque and difficult to visualize across sequential and parallel execution branches.",
+      "Generic typing tests train you on prose, not the syntax and indentation you actually type as a programmer.",
     approach: [
-      "Developed custom infinite canvas rendering engine with minimap and spatial node snapping.",
-      "Created bi-directional WebSocket streaming protocol for real-time token and tool execution inspection.",
-      "Integrated step-through execution replay and state checkpointing.",
+      "Built the app on Next.js with PostgreSQL-backed content for multiple programming languages.",
+      "Tracked WPM, accuracy, and errors in real time as the user types.",
+      "Structured snippets for beginner progression and tuned the interface for smooth, responsive practice.",
     ],
     outcome:
-      "Adopted by 15+ internal AI research teams, shortening multi-agent workflow debugging cycles by 60%.",
+      "A focused practice tool that measures the thing developers actually do: typing code accurately.",
+  },
+  {
+    slug: "musicon",
+    name: "Musicon",
+    tagline:
+      "Deep-learning genre classifier that listens to raw audio.",
+    stack: ["Python", "TensorFlow", "CNN", "Mel Spectrograms"],
+    role: "ML developer",
+    period: "Self-directed",
+    problem:
+      "Genre is a song-level label, but models usually see short clips — so the pipeline has to bridge the two.",
+    approach: [
+      "Segmented tracks into 5-second chunks and converted each into 128-band Mel spectrograms.",
+      "Trained a 4-block CNN with batch normalization, global average pooling, and dropout, using balanced class weights, early stopping, and learning-rate scheduling.",
+      "Added noise injection, time stretching, and silence filtering, then aggregated chunk predictions with majority voting.",
+    ],
+    outcome:
+      "82% validation accuracy, producing a song-level genre and confidence score from the aggregated predictions.",
   },
 ];
 
@@ -175,35 +163,51 @@ export type Service = {
 export const services: Service[] = [
   {
     id: "svc-1",
-    title: "Full-Stack Web Engineering",
+    title: "Full-Stack Web Development",
     description:
-      "End-to-end production web applications with Next.js, TypeScript, relational databases, and edge caching.",
-    deliverables: ["Scalable SaaS applications", "Design systems & component libraries", "Type-safe API architectures"],
+      "End-to-end web apps with Next.js, PostgreSQL, and typed API layers — authentication, media, and social features included.",
+    deliverables: [
+      "Social platforms & interactive feeds",
+      "JWT auth & Zod validation",
+      "Relational schemas with Drizzle ORM",
+    ],
     tech: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
   },
   {
     id: "svc-2",
-    title: "Spatial & Creative Web Experiences",
+    title: "Backend & Protocol Engineering",
     description:
-      "Interactive 3D visuals, custom shaders, and GPU-efficient canvas graphics that differentiate modern brand experiences.",
-    deliverables: ["Three.js / WebGL scenes", "Custom physics & procedural graphics", "60 FPS mobile-optimized animations"],
-    tech: ["Three.js", "React Three Fiber", "GLSL Shaders", "Motion"],
+      "Servers and clients built close to the metal, with an emphasis on framing, connection lifecycle, and clear failure modes.",
+    deliverables: [
+      "HTTP/1.1 server & CLI client in Go",
+      "Goroutine-per-connection concurrency",
+      "Timeouts, size limits & header-injection guards",
+    ],
+    tech: ["Go", "TCP", "bufio", "Node.js"],
   },
   {
     id: "svc-3",
-    title: "Distributed Systems & Telemetry",
+    title: "Applied Machine Learning",
     description:
-      "High-throughput event pipelines, message streaming, sub-second analytical queries, and resilient microservices.",
-    deliverables: ["Kafka / event-driven architectures", "ClickHouse / Redis telemetry stores", "Microservice decoupling"],
-    tech: ["Go", "Node.js", "Kafka", "ClickHouse", "Docker"],
+      "Audio and data pipelines that turn raw input into a useful prediction, with attention to class imbalance and overfitting.",
+    deliverables: [
+      "Mel-spectrogram feature pipelines",
+      "CNN training & evaluation",
+      "Augmentation and inference aggregation",
+    ],
+    tech: ["Python", "TensorFlow", "PyTorch", "CNNs"],
   },
   {
     id: "svc-4",
-    title: "Performance & Architecture Auditing",
+    title: "Learning Tools & Interfaces",
     description:
-      "Sub-100ms P95 latency optimizations, Core Web Vitals remediation, and zero-layout-shift front-end overhauls.",
-    deliverables: ["100/100 Lighthouse audits", "Bundle size reductions (>40%)", "WCAG 2.1 AA accessibility compliance"],
-    tech: ["Performance Profiling", "Edge Functions", "SEO Architecture", "Web Vitals"],
+      "Rule-based mentoring and interactive lessons that run offline, without relying on external AI keys.",
+    deliverables: [
+      "Rule-based mentor engines",
+      "Multi-step lesson design",
+      "Simulated terminal interactions",
+    ],
+    tech: ["Python", "Rule-Based Systems", "React"],
   },
 ];
 
@@ -215,56 +219,36 @@ export type SkillGroup = {
 
 export const skillGroups: SkillGroup[] = [
   {
-    category: "Frontend & Creative",
-    note: "Interface architecture, motion, and the details that make products feel alive.",
-    skills: [
-      "TypeScript",
-      "React",
-      "Next.js",
-      "Three.js / WebGL",
-      "React Three Fiber",
-      "Tailwind CSS",
-      "Motion",
-      "Design Systems",
-      "Web Performance",
-      "Accessibility (WCAG)",
-    ],
+    category: "Languages",
+    note: "The three I reach for most, depending on the layer.",
+    skills: ["Go", "TypeScript", "Python"],
   },
   {
-    category: "Backend & Architecture",
-    note: "APIs, data models, and systems that stay calm under load.",
+    category: "Frontend",
+    note: "Interfaces that stay responsive and readable.",
+    skills: ["React.js", "Next.js", "Tailwind CSS", "Responsive UI"],
+  },
+  {
+    category: "Backend & Data",
+    note: "APIs, auth, and relational models.",
     skills: [
       "Node.js",
-      "Go",
       "PostgreSQL",
-      "Redis",
-      "REST & GraphQL",
-      "Microservices",
-      "Edge Computing",
-      "Message Queues",
+      "Drizzle ORM",
+      "JWT",
+      "Zod",
+      "Supabase Storage",
     ],
   },
   {
-    category: "DevOps & Infrastructure",
-    note: "Build pipelines, observability, and shipping without drama.",
+    category: "ML & Tooling",
+    note: "Training models and shipping the code around them.",
     skills: [
-      "Docker",
-      "Kubernetes",
-      "CI/CD Pipelines",
-      "Vercel",
-      "AWS / Cloudflare",
-      "Monitoring & Telemetry",
-    ],
-  },
-  {
-    category: "Workflow & Craft",
-    note: "How the work gets made: review, documentation, and delivery.",
-    skills: [
-      "Git / GitHub Flow",
-      "System Architecture",
-      "Technical Writing",
-      "Code Review",
-      "Agile Delivery",
+      "TensorFlow",
+      "PyTorch",
+      "CNN Training",
+      "Mel Spectrograms",
+      "Git / GitHub",
     ],
   },
 ];
@@ -276,55 +260,38 @@ export type Certification = {
   id?: string;
 };
 
-export const certifications: Certification[] = [
-  {
-    name: "AWS Certified Solutions Architect – Associate",
-    issuer: "Amazon Web Services",
-    year: "2023",
-  },
-  {
-    name: "Meta Certified Front-End Developer",
-    issuer: "Meta",
-    year: "2022",
-  },
-];
+export const certifications: Certification[] = [];
 
 export const education = [
   {
-    degree: "Bachelor of Technology in Computer Science & Engineering",
-    institution: "University Institute of Technology",
-    year: "2017 – 2021",
-    notes: "Focus on Distributed Systems, Algorithms, and Human-Computer Interaction",
+    degree: "Bachelor of Science in Computer Science",
+    institution: "Adani University",
+    year: "Expected 2027",
+    notes:
+      "CGPA 7.73 / 10 · Coursework: Data Structures & Algorithms, Reinforcement Learning & Deep Learning (Python), Database Management Systems (PostgreSQL)",
   },
 ];
 
 export const journeyTimeline = [
   {
-    year: "2017 – 2021",
-    title: "Foundations & Computer Science",
-    location: "Engineering Campus",
+    year: "2023 – 2027",
+    title: "Computer Science Foundations",
+    location: "Adani University",
     blurb:
-      "Deep dive into data structures, operating systems, compiler design, and networking. Built my first 3D graphics demos with OpenGL and C++.",
+      "Coursework in data structures and algorithms, database management systems with PostgreSQL, and reinforcement learning and deep learning in Python.",
   },
   {
-    year: "2020 – 2021",
-    title: "First Production Systems",
-    location: "Labs Inc.",
+    year: "2025 – 2026",
+    title: "Full-Stack & Systems Projects",
+    location: "Independent",
     blurb:
-      "Shipped mission-critical frontend portals, introduced automated end-to-end tests, and established accessible UI standards.",
+      "Built Synapse and TypeWithMe on Next.js and PostgreSQL, an HTTP/1.1 server in Go, and an audio genre classifier in Python.",
   },
   {
-    year: "2021 – 2023",
-    title: "Creative Development & Scale",
-    location: "Digital Studio",
+    year: "May – Jul 2026",
+    title: "Software Engineer",
+    location: "VLED Lab, IIT Ropar",
     blurb:
-      "Pioneered WebGL product visualizers and scalable micro-frontends serving enterprise clients worldwide.",
-  },
-  {
-    year: "2023 – Present",
-    title: "Distributed Cloud Architecture",
-    location: "Tech Systems",
-    blurb:
-      "Engineering resilient streaming pipelines, event-driven microservices, and leading frontend architectural modernization.",
+      "Designed offline rule-based mentoring tools and a 12-step interactive lesson engine for teaching exception handling.",
   },
 ];
