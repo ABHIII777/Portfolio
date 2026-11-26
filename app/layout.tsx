@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { Nav } from "@/components/ui/Nav";
+import { CodeBackground } from "@/components/ui/CodeBackground";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { site } from "@/content/site";
@@ -106,8 +107,9 @@ export default function RootLayout({
           defaultTheme="light"
           enableSystem={false}
         >
+          <CodeBackground />
           <Nav />
-          <main id="main-content" className="flex-1">
+          <main id="main-content" className="relative z-10 flex-1">
             {children}
           </main>
           <Analytics />

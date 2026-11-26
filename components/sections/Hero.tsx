@@ -1,33 +1,7 @@
-import { site, experiences, projects } from "@/content/site";
+import { site } from "@/content/site";
 import { Portrait } from "@/components/ui/Portrait";
-import { HeroCodeBackground } from "@/components/ui/HeroCodeBackground";
 
 const year = new Date().getFullYear();
-
-const heroCode = `const abhi = {
-  name: "${site.name}",
-  role: "${site.role}",
-  location: "${site.location}",
-  timezone: "${site.timezone}",
-  status: "${site.availability}",
-  focus: ["distributed systems", "interfaces", "performance"],
-  experience: [
-${experiences
-  .map(
-    (job) =>
-      `    { role: "${job.role}", company: "${job.company}", since: "${job.start}" }`
-  )
-  .join(",\n")}
-  ],
-  projects: {
-${projects.map((project) => `    ${project.name}: "${project.tagline}"`).join(",\n")}
-  },
-  links: {
-    email: "${site.links.email.replace("mailto:", "")}",
-    github: "${site.links.github}",
-    linkedin: "${site.links.linkedin}"
-  }
-};`;
 
 export function Hero() {
   return (
@@ -36,8 +10,6 @@ export function Hero() {
       aria-label="Introduction"
       className="relative overflow-hidden pt-16"
     >
-      <HeroCodeBackground code={heroCode} />
-
       <div className="wrap relative z-10 flex min-h-[calc(100svh-4rem)] flex-col justify-between pb-7 pt-8 md:pt-12">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <p className="eyebrow rise">Portfolio / {year}</p>
