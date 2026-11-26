@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { projects, type Project } from "@/content/site";
+import { projects, site, type Project } from "@/content/site";
 import { ArrowUpRight, X } from "lucide-react";
 import { GitHubIcon } from "@/components/ui/Icons";
 
@@ -66,7 +66,7 @@ export function Work() {
           </div>
 
           <a
-            href="https://github.com/"
+            href={site.links.github}
             target="_blank"
             rel="noopener noreferrer"
             className="link-line font-mono text-[0.68rem] uppercase tracking-[0.12em] text-ink-soft hover:text-ink"

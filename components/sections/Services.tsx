@@ -16,7 +16,8 @@ export function Services() {
                 Services &amp; Capabilities
               </h2>
               <p className="text-xs sm:text-sm text-ink-soft">
-                Full-cycle technical leadership from initial architecture to 60 FPS delivery.
+                Full-stack development, backend fundamentals, and applied machine
+                learning — built end to end.
               </p>
             </div>
           </div>
@@ -25,7 +26,7 @@ export function Services() {
             href="#contact"
             className="inline-flex items-center gap-1.5 text-xs font-mono text-accent hover:underline self-start md:self-auto"
           >
-            <span>Discuss a project or contract</span>
+            <span>Discuss a project or role</span>
             <ArrowUpRight className="h-3.5 w-3.5" />
           </a>
         </div>

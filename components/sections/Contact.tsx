@@ -38,9 +38,9 @@ export function Contact() {
             </h2>
 
             <p className="measure mt-6 text-base leading-relaxed text-ink-soft">
-              Whether it&apos;s a full-time role or a freelance project, my inbox
-              is open. Tell me what you&apos;re building and I&apos;ll come back
-              with a straight answer.
+              Whether it&apos;s an internship, an early-career role, or a project
+              worth building, my inbox is open. Tell me what you&apos;re working
+              on and I&apos;ll come back with a straight answer.
             </p>
 
             <a
