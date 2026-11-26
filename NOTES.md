@@ -23,7 +23,7 @@ Recruiters and hiring managers for full-time roles. Every decision resolves towa
 - Code-rain canvas texture
 - Skeuomorphic manila project folders
 - Per-letter wave hover on links
-- Illustrated street-scene footer
+- Illustrated street-scene footer — revisited at the client's request; rebuilt as a code-drawn crowd finale
 - Full-screen letter-stagger navigation
 
 Retained only at the structural level: oversized display type, film grain, deep project case studies, one personal flourish at the end.
