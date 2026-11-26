@@ -18,7 +18,7 @@ export const site = {
     resume: "/resume.pdf",
   },
   proof: [
-    { value: "4", label: "Full-stack & systems projects" },
+    { value: "9", label: "Systems, full-stack & ML projects" },
     { value: "82%", label: "CNN validation accuracy" },
     { value: "2027", label: "B.S. Computer Science, expected" },
   ],
@@ -64,6 +64,7 @@ export type Project = {
   source?: string;
   role: string;
   period: string;
+  status?: string;
   problem: string;
   approach: string[];
   outcome: string;
@@ -71,11 +72,108 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "aether",
+    name: "Aether",
+    tagline:
+      "Full-stack framework pairing a React-style TypeScript client runtime with a Go server and unified CLI.",
+    stack: ["TypeScript", "Go", "PostgreSQL", "JSX Runtime", "go:embed"],
+    source: "https://github.com/ABHIII777/Aether",
+    role: "Creator & architect",
+    period: "2026 — Present",
+    status: "In progress",
+    problem:
+      "Shipping a React-style frontend with a Go backend usually requires gluing two separate toolchains, build pipelines, and deployment artifacts together.",
+    approach: [
+      "Built a first-party TypeScript client runtime (@aether/core) with automatic JSX, useState/useEffect hooks, keyed DOM reconciliation, and a history router.",
+      "Engineered a Go server framework with route groups, typed path parameters, middleware (request IDs, logging, CORS, rate limiting), and PostgreSQL cookie sessions.",
+      "Created the aether CLI (create, dev, build) with live reload, /api proxying, and single-binary production builds using go:embed.",
+    ],
+    outcome:
+      "Currently under active development — v0.1 runtime, Go server, SQL migrations, and CI tests are running with ongoing feature expansion.",
+  },
+  {
+    slug: "forge",
+    name: "Forge",
+    tagline:
+      "Collaborative developer platform with workspaces, issue tracking, threaded discussions, and file versioning.",
+    stack: ["Next.js", "TypeScript", "React 19", "Tailwind CSS", "Drizzle ORM", "Radix UI"],
+    source: "https://github.com/ABHIII777/Forge",
+    role: "Full-stack developer",
+    period: "2026",
+    problem:
+      "Engineering teams often split workspaces, issue workflows, technical discussions, and file versioning across disconnected tools.",
+    approach: [
+      "Built multi-workspace project and issue tracking with customizable workflows, priorities, labels, assignees, and due dates.",
+      "Implemented role-based access control (owner, admin, member, viewer), real-time notifications, presence indicators, and threaded discussions.",
+      "Added hierarchical file management with versioning and global search across projects, issues, discussions, and files.",
+    ],
+    outcome:
+      "A unified developer collaboration platform delivered with Next.js 16, Drizzle ORM, and accessible Radix UI primitives.",
+  },
+  {
+    slug: "imenu",
+    name: "iMenu",
+    tagline:
+      "Native macOS utility combining live system telemetry, window switching, and clipboard history.",
+    stack: ["Swift", "SwiftUI", "AppKit", "ScreenCaptureKit", "CoreData", "IOKit"],
+    source: "https://github.com/ABHIII777/iMenu",
+    role: "macOS developer",
+    period: "2026",
+    problem:
+      "Checking system health, switching windows, and recalling clipboard history on macOS typically requires three separate background apps.",
+    approach: [
+      "Built a native AppKit/SwiftUI overlay using ScreenCaptureKit and macOS Accessibility APIs (AXUIElement) for fast window inspection and switching.",
+      "Implemented live disk, memory, and battery telemetry directly via Darwin and IOKit.ps.",
+      "Added persistent clipboard history (iClip) backed by CoreData.",
+    ],
+    outcome:
+      "A lightweight, native macOS productivity companion running directly from the menu bar.",
+  },
+  {
+    slug: "icode",
+    name: "iCode",
+    tagline:
+      "Lightweight multi-threaded Python code editor with LSP autocompletion and integrated terminal.",
+    stack: ["Python", "LSP", "Multi-threading", "Terminal Integration"],
+    source: "https://github.com/ABHIII777/iCode",
+    role: "Solo developer",
+    period: "2025",
+    problem:
+      "Understanding how modern IDEs stay responsive requires coordinating editor rendering, language servers, and subprocess I/O without blocking the UI.",
+    approach: [
+      "Built a custom editor with syntax highlighting and an integrated terminal to execute Python code directly in-app.",
+      "Implemented an LSP client communicating with language servers for intelligent code completions.",
+      "Separated LSP reading, completions, and stderr logging onto dedicated background threads.",
+    ],
+    outcome:
+      "A responsive, cross-platform mini IDE demonstrating asynchronous LSP communication and terminal integration in Python.",
+  },
+  {
+    slug: "ishell",
+    name: "iShell",
+    tagline:
+      "Interactive Unix shell and alternate-screen TUI built in Rust with structured table output.",
+    stack: ["Rust", "ratatui", "crossterm", "reedline", "tabled"],
+    source: "https://github.com/ABHIII777/iShell",
+    role: "Systems developer",
+    period: "2025",
+    problem:
+      "Traditional Unix shell output is unstructured plain text, making file metadata and permission inspection harder to scan quickly.",
+    approach: [
+      "Built an interactive command shell in Rust 2024 edition with reedline line-editing and POSIX permission formatting.",
+      "Integrated structured, colorized table rendering via tabled, nu-table, and colored.",
+      "Implemented an alternate-screen TUI mode using ratatui and crossterm with ANSI escape stripping.",
+    ],
+    outcome:
+      "A fast, ergonomic Rust shell blending classic Unix command execution with structured TUI views.",
+  },
+  {
     slug: "http-server-go",
     name: "HTTP/1.1 Server",
     tagline:
       "HTTP/1.1 server and interactive CLI client built from scratch in Go, without net/http.",
     stack: ["Go", "TCP", "bufio", "CLI"],
+    source: "https://github.com/ABHIII777/Backend-With-GO",
     role: "Solo developer",
     period: "Self-directed",
     problem:
@@ -102,6 +200,8 @@ export const projects: Project[] = [
       "Zod",
       "Supabase Storage",
     ],
+    live: "https://synapse-two-rho.vercel.app",
+    source: "https://github.com/ABHIII777/Synapse",
     role: "Full-stack developer",
     period: "Self-directed",
     problem:
@@ -120,6 +220,8 @@ export const projects: Project[] = [
     tagline:
       "Typing practice built around real code snippets instead of generic text.",
     stack: ["Next.js", "PostgreSQL", "TypeScript"],
+    live: "https://type-with-me-nine.vercel.app",
+    source: "https://github.com/ABHIII777/TypeWithMe",
     role: "Solo developer",
     period: "Self-directed",
     problem:
@@ -133,13 +235,14 @@ export const projects: Project[] = [
       "A focused practice tool that measures the thing developers actually do: typing code accurately.",
   },
   {
-    slug: "musicon",
-    name: "Musicon",
+    slug: "music-genre-prediction",
+    name: "Music Genre Prediction",
     tagline:
-      "Deep-learning genre classifier that listens to raw audio.",
+      "Deep-learning genre classifier that listens to raw audio via Mel spectrograms.",
     stack: ["Python", "TensorFlow", "CNN", "Mel Spectrograms"],
+    source: "https://github.com/ABHIII777/Music-Genre-Prediction",
     role: "ML developer",
-    period: "Self-directed",
+    period: "2026",
     problem:
       "Genre is a song-level label, but models usually see short clips — so the pipeline has to bridge the two.",
     approach: [
