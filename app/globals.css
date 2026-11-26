@@ -183,15 +183,58 @@ body::before {
   font-family: var(--font-mono);
   font-size: 11px;
   line-height: 1.7;
-  white-space: pre;
   color: var(--ink);
-  opacity: 0.05;
-  mask-image: linear-gradient(to bottom, #000 5%, transparent 90%);
-  -webkit-mask-image: linear-gradient(to bottom, #000 5%, transparent 90%);
+  mask-image: linear-gradient(to bottom, #000 5%, transparent 92%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 5%, transparent 92%);
 }
 
-[data-theme="dark"] .hero-code {
+.hero-code-layer {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  overflow: hidden;
+  white-space: pre;
+  transition: opacity 0.35s var(--ease);
+}
+
+.hero-code-base {
+  opacity: 0.05;
+}
+
+[data-theme="dark"] .hero-code-base {
   opacity: 0.09;
+}
+
+.hero-code-glow {
+  opacity: 0;
+  mask-image: radial-gradient(
+    circle 260px at var(--code-x, 50%) var(--code-y, 50%),
+    #000 0%,
+    rgba(0, 0, 0, 0.95) 38%,
+    rgba(0, 0, 0, 0.5) 72%,
+    transparent 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle 260px at var(--code-x, 50%) var(--code-y, 50%),
+    #000 0%,
+    rgba(0, 0, 0, 0.95) 38%,
+    rgba(0, 0, 0, 0.5) 72%,
+    transparent 100%
+  );
+}
+
+.hero-code[data-active="true"] .hero-code-glow {
+  opacity: 0.58;
+}
+
+[data-theme="dark"] .hero-code[data-active="true"] .hero-code-glow {
+  opacity: 0.7;
+}
+
+@media (hover: none) {
+  .hero-code-glow {
+    display: none;
+  }
 }
 
 .hero-bracket {
