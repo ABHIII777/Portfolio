@@ -121,7 +121,11 @@ export function Work() {
                       />
                     </span>
                     <span className="folder-front-foot">
-                      <span>{project.role}</span>
+                      <span>
+                        {project.status
+                          ? `${project.role} · ${project.status}`
+                          : project.role}
+                      </span>
                       <span>{isOpen ? "Close" : "Open"}</span>
                     </span>
                   </span>
@@ -197,7 +201,7 @@ export function Work() {
                   <div className="bg-canvas p-3">
                     <dt className="eyebrow">Status</dt>
                     <dd className="mt-1 text-sm leading-snug text-ink">
-                      Shipped
+                      {selected.status ?? "Shipped"}
                     </dd>
                   </div>
                 </dl>
