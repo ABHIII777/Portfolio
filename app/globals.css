@@ -1066,7 +1066,8 @@ body::before {
 .footer-crowd-toggle {
   position: absolute;
   right: 0.75rem;
-  bottom: 0.75rem;
+  top: 0.75rem;
+  bottom: auto;
   z-index: 4;
   display: inline-flex;
   align-items: center;
