@@ -6,6 +6,7 @@ import { CodeBackground } from "@/components/ui/CodeBackground";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { site } from "@/content/site";
+import { siteUrl } from "@/lib/site-url";
 import "./globals.css";
 
 const fontGrotesk = localFont({
@@ -31,7 +32,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://abhipatel.me"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: `${site.name} — ${site.role}`,
     template: `%s · ${site.name}`,
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://abhipatel.me",
+    url: siteUrl,
     title: `${site.name} — ${site.role}`,
     description: site.pitch,
     siteName: site.name,
@@ -75,7 +76,7 @@ const jsonLd = {
   name: site.name,
   jobTitle: site.role,
   description: site.pitch,
-  url: "https://abhipatel.me",
+  url: siteUrl,
   email: site.links.email,
   sameAs: [site.links.github, site.links.linkedin],
 };

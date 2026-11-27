@@ -13,6 +13,17 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Canonical URL
+
+Metadata, `sitemap.xml`, `robots.txt`, and JSON-LD resolve the site URL in
+this order:
+
+1. `NEXT_PUBLIC_SITE_URL` — set this in Vercel (or `.env.local`), e.g.
+   `https://abhipatel.me`.
+2. `VERCEL_PROJECT_PRODUCTION_URL` — provided automatically by Vercel.
+3. `VERCEL_URL` — the individual deployment URL.
+4. `http://localhost:3000` — local fallback.
+
 ## Edit content
 
 All copy, links, experience, projects, skills, and education live in
