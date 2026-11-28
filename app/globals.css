@@ -922,6 +922,7 @@ body::before {
   overflow: hidden;
   background: var(--scene-bg);
   color: var(--scene-ink);
+  --crowd-scale: 1.14;
 }
 
 .footer-crowd-name {
@@ -958,6 +959,7 @@ body::before {
 .footer-crowd-back {
   z-index: 1;
   color: #a7a49c;
+  filter: saturate(0.55) brightness(1.03);
   transform: translate3d(
     calc(var(--parallax-x, 0) * -8px),
     calc(var(--parallax-scroll, 0) * 12px),
@@ -1192,6 +1194,7 @@ body::before {
 
   .footer-crowd-scene {
     min-height: clamp(320px, 48svh, 440px);
+    --crowd-scale: 1;
   }
 
   .footer-crowd-name {
