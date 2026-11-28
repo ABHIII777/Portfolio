@@ -853,6 +853,11 @@ function SelfPortrait() {
       {/* Sneakers — lime accent */}
       <path d="M49 286h17v13H44c-3 0-4-4-1-6z" fill="#d8ff3e" stroke="#141414" strokeWidth="1.6" />
       <path d="M74 286h17l7 7c2 2 0 6-3 6H74z" fill="#d8ff3e" stroke="#141414" strokeWidth="1.6" />
+      {/* Soles and laces keep the sneakers reading as shoes, not a board */}
+      <path d="M44 296h22v3H44c-3 0-4-2-1-3z" fill="#141414" />
+      <path d="M74 296h24v3H74z" fill="#141414" />
+      <path d="M53 289h9M53 292h9" stroke="#141414" strokeWidth="1.2" strokeLinecap="round" />
+      <path d="M78 289h9M78 292h9" stroke="#141414" strokeWidth="1.2" strokeLinecap="round" />
 
       {/* Jacket / Overshirt */}
       <path d="M36 106c0-14 15-22 34-22s34 8 34 22l-4 88H40z" fill="#141414" />
